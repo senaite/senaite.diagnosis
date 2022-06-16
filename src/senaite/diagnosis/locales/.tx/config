@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[senaite-diagnosis.senaite]
+file_filter = <lang>/LC_MESSAGES/senaite.diagnosis.po
+host = https://www.transifex.com
+source_file = senaite.diagnosis.pot
+source_lang = en
+type = PO

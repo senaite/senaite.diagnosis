@@ -15,70 +15,70 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: senaite.diagnosis\n"
 
-#: senaite/diagnosis/profiles/default/types/AetiologicAgent.xml
+#: senaite.diagnosis/src/senaite/diagnosis/profiles/default/types/AetiologicAgent.xml
 msgid "Aetiologic agent"
 msgstr ""
 
-#: senaite/diagnosis/profiles/default/types/AetiologicAgents.xml
+#: senaite.diagnosis/src/senaite/diagnosis/profiles/default/types/AetiologicAgents.xml
 msgid "Aetiologic agents"
 msgstr ""
 
-#: senaite/diagnosis/browser/content/diseases.py:55
-#: senaite/diagnosis/browser/content/symptoms.py:55
-#: senaite/diagnosis/content/disease.py:42
+#: senaite.diagnosis/src/senaite/diagnosis/browser/content/diseases.py:55
+#: senaite.diagnosis/src/senaite/diagnosis/browser/content/symptoms.py:55
+#: senaite.diagnosis/src/senaite/diagnosis/content/disease.py:42
 msgid "Code"
 msgstr ""
 
-#: senaite/diagnosis/utils.py:45
+#: senaite.diagnosis/src/senaite/diagnosis/utils.py:45
 msgid "Code cannot contain special characters or spaces"
 msgstr ""
 
-#: senaite/diagnosis/utils.py:55
+#: senaite.diagnosis/src/senaite/diagnosis/utils.py:55
 msgid "Code must be unique"
 msgstr ""
 
-#: senaite/diagnosis/profiles/default/types/Disease.xml
+#: senaite.diagnosis/src/senaite/diagnosis/profiles/default/types/Disease.xml
 msgid "Disease"
 msgstr ""
 
-#: senaite/diagnosis/profiles/default/types/Diseases.xml
+#: senaite.diagnosis/src/senaite/diagnosis/profiles/default/types/Diseases.xml
 msgid "Diseases"
 msgstr ""
 
-#: senaite/diagnosis/content/symptom.py:57
+#: senaite.diagnosis/src/senaite/diagnosis/content/symptom.py:57
 msgid "Gender"
 msgstr ""
 
-#: senaite/diagnosis/content/symptom.py:58
+#: senaite.diagnosis/src/senaite/diagnosis/content/symptom.py:58
 msgid "Gender this symptom applies to"
 msgstr ""
 
-#: senaite/diagnosis/configure.zcml:27
+#: senaite.diagnosis/src/senaite/diagnosis/configure.zcml:27
 msgid "Patient diagnostic information handling for SENAITE"
 msgstr ""
 
-#: senaite/diagnosis/configure.zcml:27
+#: senaite.diagnosis/src/senaite/diagnosis/configure.zcml:27
 msgid "SENAITE DIAGNOSIS"
 msgstr ""
 
-#: senaite/diagnosis/configure.zcml:45
+#: senaite.diagnosis/src/senaite/diagnosis/configure.zcml:45
 msgid "SENAITE DIAGNOSIS (uninstall)"
 msgstr ""
 
-#: senaite/diagnosis/content/symptom.py:68
+#: senaite.diagnosis/src/senaite/diagnosis/content/symptom.py:68
 msgid "Select if patient can experience different stress levels of this symptom (none, mild, moderate, severe)"
 msgstr ""
 
-#: senaite/diagnosis/content/symptom.py:67
+#: senaite.diagnosis/src/senaite/diagnosis/content/symptom.py:67
 msgid "Severity levels permitted"
 msgstr ""
 
-#: senaite/diagnosis/profiles/default/types/Symptoms.xml
+#: senaite.diagnosis/src/senaite/diagnosis/profiles/default/types/Symptoms.xml
 msgid "Signs and symptoms"
 msgstr ""
 
-#: senaite/diagnosis/profiles/default/types/Symptom.xml
+#: senaite.diagnosis/src/senaite/diagnosis/profiles/default/types/Symptom.xml
 msgid "Symptom"
 msgstr ""

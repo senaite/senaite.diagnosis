@@ -20,16 +20,16 @@
 
 from plone.dexterity.content import Container
 from plone.supermodel import model
-from senaite.diagnosis.interfaces import IAetiologicAgents
+from senaite.diagnosis.interfaces import IEtiologicAgents
 from zope.interface import implementer
 
 
-class IAetiologicAgentsSchema(model.Schema):
+class IEtiologicAgentsSchema(model.Schema):
     """Schema interface
     """
 
 
-@implementer(IAetiologicAgents, IAetiologicAgentsSchema)
-class AetiologicAgents(Container):
-    """Folder for Aetiologic Agent contents
+@implementer(IEtiologicAgents, IEtiologicAgentsSchema)
+class EtiologicAgents(Container):
+    """Folder for Etiologic Agent contents
     """

@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<object name="AetiologicAgents"
+<object name="EtiologicAgent"
         meta_type="Dexterity FTI"
         i18n:domain="senaite.diagnosis"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Title and Description -->
-  <property name="title" i18n:translate="">Aetiologic agents</property>
+  <property name="title" i18n:translate="">Etiologic agent</property>
   <property name="description" i18n:translate=""/>
 
   <!-- content-type icon -->
-  <property name="icon_expr">senaite_theme/icon/aetiologic_agent</property>
+  <property name="icon_expr">senaite_theme/icon/etiologic_agent</property>
 
   <!-- factory name; usually the same as type name -->
-  <property name="factory">AetiologicAgents</property>
+  <property name="factory">EtiologicAgent</property>
 
   <!-- URL TALES expression to add an item TTW -->
-  <property name="add_view_expr">string:${folder_url}/++add++AetiologicAgents</property>
+  <property name="add_view_expr">string:${folder_url}/++add++EtiologicAgent</property>
 
   <property name="link_target"/>
   <property name="immediate_view">view</property>
 
   <!-- Is this item addable globally, or is it restricted? -->
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
 
   <!-- If we're a container, should we filter addable content types? -->
   <property name="filter_content_types">True</property>
   <!-- If filtering, what's allowed -->
   <property name="allowed_content_types">
-    <element value="AetiologicAgent" />
   </property>
 
   <property name="allow_discussion">False</property>
@@ -44,12 +43,14 @@
   <property name="add_permission">cmf.AddPortalContent</property>
 
   <!-- Python class for content items of this sort -->
-  <property name="schema">senaite.diagnosis.content.aetiologicagents.IAetiologicAgentsSchema</property>
-  <property name="klass">senaite.diagnosis.content.aetiologicagents.AetiologicAgents</property>
+  <property name="schema">senaite.diagnosis.content.etiologicagent.IEtiologicAgentSchema</property>
+  <property name="klass">senaite.diagnosis.content.etiologicagent.EtiologicAgent</property>
 
   <!-- Dexterity behaviours for this type -->
   <property name="behaviors">
-    <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
+    <element value="bika.lims.interfaces.IAutoGenerateID"/>
+    <element value="bika.lims.interfaces.IMultiCatalogBehavior"/>
+    <element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />
   </property>
 
   <!-- Action aliases -->
@@ -67,7 +68,7 @@
           icon_expr=""
           link_target=""
           url_expr="string:${object_url}"
-          visible="False">
+          visible="True">
     <permission value="View"/>
   </action>
 
@@ -79,8 +80,7 @@
           description=""
           icon_expr=""
           link_target=""
-          url_expr="string:${object_url}/edit"
-          visible="False">
+          url_expr="string:${object_url}/edit" visible="True">
     <permission value="Modify portal content"/>
   </action>
 

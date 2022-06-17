@@ -17,12 +17,12 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: senaite/diagnosis/profiles/default/types/AetiologicAgent.xml
-msgid "Aetiologic agent"
+#: senaite/diagnosis/profiles/default/types/EtiologicAgent.xml
+msgid "Etiologic agent"
 msgstr ""
 
-#: senaite/diagnosis/profiles/default/types/AetiologicAgents.xml
-msgid "Aetiologic agents"
+#: senaite/diagnosis/profiles/default/types/EtiologicAgents.xml
+msgid "Etiologic agents"
 msgstr ""
 
 #: senaite/diagnosis/browser/content/diseases.py:55

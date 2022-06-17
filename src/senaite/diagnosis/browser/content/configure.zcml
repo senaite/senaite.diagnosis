@@ -3,11 +3,11 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="senaite.diagnosis">
 
-  <!-- Aetiologic Agents listing view -->
+  <!-- Etiologic Agents listing view -->
   <browser:page
-      for="senaite.diagnosis.interfaces.IAetiologicAgents"
+      for="senaite.diagnosis.interfaces.IEtiologicAgents"
       name="view"
-      class=".aetiologicagents.AetiologicAgentsListingView"
+      class=".etiologicagents.EtiologicAgentsListingView"
       permission="senaite.core.permissions.ManageBika"
       layer="senaite.diagnosis.interfaces.ISenaiteDiagnosisLayer" />
 

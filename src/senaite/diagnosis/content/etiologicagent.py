@@ -24,12 +24,12 @@ from bika.lims.interfaces import IDeactivable
 from plone.dexterity.content import Container
 from plone.supermodel import model
 from senaite.core.catalog import SETUP_CATALOG
-from senaite.diagnosis.interfaces import IAetiologicAgent
+from senaite.diagnosis.interfaces import IEtiologicAgent
 from zope import schema
 from zope.interface import implementer
 
 
-class IAetiologicAgentSchema(model.Schema):
+class IEtiologicAgentSchema(model.Schema):
     """Schema interface
     """
 
@@ -44,9 +44,9 @@ class IAetiologicAgentSchema(model.Schema):
     )
 
 
-@implementer(IAetiologicAgent, IAetiologicAgentSchema, IDeactivable)
-class AetiologicAgent(Container):
-    """AetiologicAgent type
+@implementer(IEtiologicAgent, IEtiologicAgentSchema, IDeactivable)
+class EtiologicAgent(Container):
+    """EtiologicAgent type
     """
     # Catalogs where this type will be catalogued
     _catalogs = [SETUP_CATALOG]

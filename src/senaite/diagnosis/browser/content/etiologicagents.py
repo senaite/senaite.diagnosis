@@ -25,24 +25,24 @@ from senaite.app.listing import ListingView
 from senaite.core.catalog import SETUP_CATALOG
 
 
-class AetiologicAgentsListingView(ListingView):
-    """Aetiologic Agents listing view
+class EtiologicAgentsListingView(ListingView):
+    """Etiologic Agents listing view
     """
 
     def __init__(self, context, request):
-        super(AetiologicAgentsListingView, self).__init__(context, request)
+        super(EtiologicAgentsListingView, self).__init__(context, request)
 
         self.catalog = SETUP_CATALOG
 
         self.contentFilter = {
-            "portal_type": "AetiologicAgent",
+            "portal_type": "EtiologicAgent",
             "sort_on": "sortable_title",
             "sort_order": "ascending",
         }
 
         self.context_actions = {
             _s("Add"): {
-                "url": "++add++AetiologicAgent",
+                "url": "++add++EtiologicAgent",
                 "icon": "add.png"}
             }
 
@@ -83,12 +83,12 @@ class AetiologicAgentsListingView(ListingView):
     def update(self):
         """Update hook
         """
-        super(AetiologicAgentsListingView, self).update()
+        super(EtiologicAgentsListingView, self).update()
 
     def before_render(self):
         """Before template render hook
         """
-        super(AetiologicAgentsListingView, self).before_render()
+        super(EtiologicAgentsListingView, self).before_render()
 
     def folderitem(self, obj, item, index):
         """Service triggered each time an item is iterated in folderitems.
@@ -104,5 +104,5 @@ class AetiologicAgentsListingView(ListingView):
     def get_children_hook(self, parent_uid, child_uids=None):
         """Hook to get the children of an item
         """
-        super(AetiologicAgentsListingView, self).get_children_hook(
+        super(EtiologicAgentsListingView, self).get_children_hook(
             parent_uid, child_uids=child_uids)

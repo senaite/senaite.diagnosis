@@ -38,13 +38,13 @@ class IContentFolder(IHideActionsMenu, IDoNotSupportSnapshots):
     """
 
 
-class IAetiologicAgents(IContentFolder):
-    """Marker interface for container of Aetiologic Agents
+class IEtiologicAgents(IContentFolder):
+    """Marker interface for container of Etiologic Agents
     """
 
 
-class IAetiologicAgent(Interface):
-    """Marker interface for Aetiologic Agent objects
+class IEtiologicAgent(Interface):
+    """Marker interface for Etiologic Agent objects
     """
 
 

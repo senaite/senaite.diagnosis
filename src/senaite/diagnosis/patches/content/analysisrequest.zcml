@@ -63,4 +63,22 @@
       ignoreOriginal="True"
       replacement=".analysisrequest.setDiseases" />
 
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getRawEtiologicAgents"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getRawEtiologicAgents" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getEtiologicAgents"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getEtiologicAgents" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setEtiologicAgents"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setEtiologicAgents" />
+
 </configure>

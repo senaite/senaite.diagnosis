@@ -77,3 +77,21 @@ def setDiseases(self, value):  # noqa camelcase
     """Sets the diseases to the sample
     """
     self.getField("Diseases").set(self, value)
+
+
+def getRawEtiologicAgents(self):  # noqa camelcase
+    """Returns the UIDs of the EtiologicAgent objects assigned to the Sample
+    """
+    return self.getField("EtiologicAgents").getRaw(self)
+
+
+def getEtiologicAgents(self):  # noqa camelcase
+    """Returns the EtiologicAgent objects assigned to the sample
+    """
+    return self.getField("EtiologicAgents").get(self)
+
+
+def setEtiologicAgents(self, value):  # noqa camelcase
+    """Sets the etiologic agents to the sample
+    """
+    self.getField("EtiologicAgents").set(self, value)

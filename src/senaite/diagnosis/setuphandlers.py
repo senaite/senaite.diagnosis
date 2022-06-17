@@ -47,6 +47,7 @@ WORKFLOWS_TO_UPDATE = {
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditDiseases: (),
+                    permissions.FieldEditEtiologicAgents: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -57,6 +58,7 @@ WORKFLOWS_TO_UPDATE = {
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditDiseases: (),
+                    permissions.FieldEditEtiologicAgents: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -67,6 +69,7 @@ WORKFLOWS_TO_UPDATE = {
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditDiseases: (),
+                    permissions.FieldEditEtiologicAgents: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -77,6 +80,7 @@ WORKFLOWS_TO_UPDATE = {
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditDiseases: (),
+                    permissions.FieldEditEtiologicAgents: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -87,6 +91,7 @@ WORKFLOWS_TO_UPDATE = {
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditDiseases: (),
+                    permissions.FieldEditEtiologicAgents: (),
                     permissions.FieldEditSymptoms: (),
                 }
             }

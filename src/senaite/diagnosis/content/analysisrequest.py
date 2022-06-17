@@ -127,6 +127,32 @@ NEW_FIELDS = [
         ),
     ),
 
+    ExtUIDReferenceField(
+        "EtiologicAgents",
+        allowed_types=("EtiologicAgent", ),
+        multiValued=True,
+        read_permission=View,
+        write_permission=permissions.FieldEditEtiologicAgents,
+        widget=ReferenceWidget(
+            label=_(u"Etiologic agents"),
+            description=_(
+                u"Infectious agents (microorganisms or toxins) that cause or "
+                u"may cause the disease or diseases"
+            ),
+            render_own_label=True,
+            visible={
+                "add": "edit",
+            },
+            catalog_name=SETUP_CATALOG,
+            base_query={
+                "is_active": True,
+                "sort_on": "sortable_title",
+                "sort_order": "ascending",
+            },
+            showOn=True,
+        )
+    ),
+
 ]
 
 

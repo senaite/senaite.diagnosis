@@ -6,6 +6,7 @@
   <permission id="senaite.diagnosis.permissions.FieldEditDateOfDiagnosis" title="senaite.diagnosis: Field: Edit Date of Diagnosis"/>
   <permission id="senaite.diagnosis.permissions.FieldEditDateOfOnset" title="senaite.diagnosis: Field: Edit Date of Onset"/>
   <permission id="senaite.diagnosis.permissions.FieldEditDiseases" title="senaite.diagnosis: Field: Edit Diseases"/>
+  <permission id="senaite.diagnosis.permissions.FieldEditEtiologicAgents" title="senaite.diagnosis: Field: Edit Etiologic Agents"/>
   <permission id="senaite.diagnosis.permissions.FieldEditSymptoms" title="senaite.diagnosis: Field: Edit Symptoms"/>
 
 </configure>

@@ -46,6 +46,7 @@ WORKFLOWS_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
+                    permissions.FieldEditDiseases: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -55,6 +56,7 @@ WORKFLOWS_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
+                    permissions.FieldEditDiseases: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -64,6 +66,7 @@ WORKFLOWS_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
+                    permissions.FieldEditDiseases: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -73,6 +76,7 @@ WORKFLOWS_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
+                    permissions.FieldEditDiseases: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -82,6 +86,7 @@ WORKFLOWS_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfDiagnosis: (),
                     permissions.FieldEditDateOfOnset: (),
+                    permissions.FieldEditDiseases: (),
                     permissions.FieldEditSymptoms: (),
                 }
             }

@@ -59,3 +59,21 @@ def setDateOfDiagnosis(self, value):  # noqa camelcase
     """Sets the date of diagnosis, when the diagnosis was/were determined
     """
     self.getField("DateOfDiagnosis").set(self, value)
+
+
+def getRawDiseases(self):  # noqa camelcase
+    """Returns the UIDs of the Disease objects assigned to the Sample
+    """
+    return self.getField("Diseases").getRaw(self)
+
+
+def getDiseases(self):  # noqa camelcase
+    """Returns the Disease objects assigned to the sample
+    """
+    return self.getField("Diseases").get(self)
+
+
+def setDiseases(self, value):  # noqa camelcase
+    """Sets the diseases to the sample
+    """
+    self.getField("Diseases").set(self, value)

@@ -79,6 +79,34 @@ NEW_FIELDS = [
         ),
     ),
 
+    ExtUIDReferenceField(
+        "Diseases",
+        allowed_types=("Disease", ),
+        multiValued=True,
+        read_permission=View,
+        write_permission=permissions.FieldEditDiseases,
+        widget=ReferenceWidget(
+            label=_(u"Diseases or conditions"),
+            description=_(
+                u"Particular abnormal conditions that negatively affect the "
+                u"structure or function of all or part of an organism. Often "
+                u"known to be medical conditions that are associated with "
+                u"specific signs and symptoms"
+            ),
+            render_own_label=True,
+            visible={
+                "add": "edit",
+            },
+            catalog_name=SETUP_CATALOG,
+            base_query={
+                "is_active": True,
+                "sort_on": "sortable_title",
+                "sort_order": "ascending",
+            },
+            showOn=True,
+        )
+    ),
+
     ExtDateTimeField(
         "DateOfDiagnosis",
         required=False,
@@ -88,7 +116,9 @@ NEW_FIELDS = [
             render_own_label=True,
             label=_(u"Date of Diagnosis"),
             description=_(
-                u"Date when the diagnosis was/were determined"
+                u"Date when the diagnosis, as the process of identifying a "
+                u"disease, condition or injure from its signs and symptoms, "
+                u"was determined"
             ),
             show_time=False,
             visible={

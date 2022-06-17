@@ -71,8 +71,19 @@ class IDiseaseSchema(model.Schema):
 
 @implementer(IDisease, IDiseaseSchema, IDeactivable)
 class Disease(Container):
-    """Disease type
+    """Disease content. A disease is a particular abnormal condition that
+    negatively affects the structure or function of all or part of an organism,
+    and that is not immediately due to any external injury. Often known to be
+    medical conditions that are associated with specific signs and symptoms.
+    Disease is often used more broadly to refer to any condition that causes
+    pain, dysfunction, distress, social problems, or death to the person
+    afflicted, or similar problems for those in contact with the person.
+    In this broader sense, it sometimes includes injuries, disabilities,
+    disorders, syndromes, infections, isolated symptoms, deviant behaviors,
+    and atypical variations of structure and function, while in other contexts
+    and for other purposes these may be considered distinguishable categories.
     """
+
     # Catalogs where this type will be catalogued
     _catalogs = [SETUP_CATALOG]
 

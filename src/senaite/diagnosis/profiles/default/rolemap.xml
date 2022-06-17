@@ -16,6 +16,12 @@
       <role name="Manager"/>
       <role name="Client"/>
     </permission>
+    <permission name="senaite.diagnosis: Field: Edit Diseases" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
     <permission name="senaite.diagnosis: Field: Edit Symptoms" acquire="False">
       <role name="LabClerk"/>
       <role name="LabManager"/>

@@ -22,4 +22,5 @@
 
 FieldEditDateOfDiagnosis = "senaite.diagnosis: Field: Edit Date of Diagnosis"
 FieldEditDateOfOnset = "senaite.diagnosis: Field: Edit Date of Onset"
+FieldEditDiseases = "senaite.diagnosis: Field: Edit Diseases"
 FieldEditSymptoms = "senaite.diagnosis: Field: Edit Symptoms"

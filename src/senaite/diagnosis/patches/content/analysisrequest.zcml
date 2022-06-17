@@ -45,4 +45,22 @@
       ignoreOriginal="True"
       replacement=".analysisrequest.setDateOfDiagnosis" />
 
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getRawDiseases"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getRawDiseases" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getDiseases"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getDiseases" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setDiseases"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setDiseases" />
+
 </configure>

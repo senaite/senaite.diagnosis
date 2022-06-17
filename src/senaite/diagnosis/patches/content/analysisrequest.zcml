@@ -13,12 +13,24 @@
       class="bika.lims.content.analysisrequest.AnalysisRequest"
       original="getSymptoms"
       ignoreOriginal="True"
-      replacement=".analysisrequest.getRawSymptoms" />
+      replacement=".analysisrequest.getSymptoms" />
 
   <monkey:patch
       class="bika.lims.content.analysisrequest.AnalysisRequest"
       original="setSymptoms"
       ignoreOriginal="True"
-      replacement=".analysisrequest.getRawSymptoms" />
+      replacement=".analysisrequest.setSymptoms" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getDateOfOnset"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getDateOfOnset" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setDateOfOnset"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setDateOfOnset" />
 
 </configure>

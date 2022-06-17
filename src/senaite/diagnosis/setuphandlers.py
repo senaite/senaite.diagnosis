@@ -44,6 +44,7 @@ WORKFLOWS_TO_UPDATE = {
                 "preserve_transitions": True,
                 "permissions": {
                     # Field permissions (read-only)
+                    permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -51,6 +52,7 @@ WORKFLOWS_TO_UPDATE = {
                 "preserve_transitions": True,
                 "permissions": {
                     # Field permissions (read-only)
+                    permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -58,6 +60,7 @@ WORKFLOWS_TO_UPDATE = {
                 "preserve_transitions": True,
                 "permissions": {
                     # Field permissions (read-only)
+                    permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -65,6 +68,7 @@ WORKFLOWS_TO_UPDATE = {
                 "preserve_transitions": True,
                 "permissions": {
                     # Field permissions (read-only)
+                    permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditSymptoms: (),
                 }
             },
@@ -72,6 +76,7 @@ WORKFLOWS_TO_UPDATE = {
                 "preserve_transitions": True,
                 "permissions": {
                     # Field permissions (read-only)
+                    permissions.FieldEditDateOfOnset: (),
                     permissions.FieldEditSymptoms: (),
                 }
             }

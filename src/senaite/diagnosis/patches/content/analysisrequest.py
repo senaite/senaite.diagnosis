@@ -31,7 +31,19 @@ def getSymptoms(self):  # noqa camelcase
     return self.getField("Symptoms").get(self)
 
 
-def setSymptoms(self, value):
+def setSymptoms(self, value):  # noqa camelcase
     """Sets the symptoms to the sample
     """
     self.getField("Symptoms").set(self, value)
+
+
+def getDateOfOnset(self):  # noqa camelcase
+    """Returns the date of onset, when the signs and symptoms were first noted
+    """
+    return self.getField("DateOfOnset").get(self)
+
+
+def setDateOfOnset(self, value):  # noqa camelcase
+    """Sets the date of onset, when the signs and symptoms were first noted
+    """
+    self.getField("DateOfOnset").set(self, value)

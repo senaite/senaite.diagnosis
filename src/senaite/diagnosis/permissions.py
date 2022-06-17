@@ -19,4 +19,6 @@
 # Some rights reserved, see README and LICENSE.
 
 # Field permissions for Samples (aka AnalysisRequest)
+
+FieldEditDateOfOnset = "senaite.diagnosis: Field: Edit Date of Onset"
 FieldEditSymptoms = "senaite.diagnosis: Field: Edit Symptoms"

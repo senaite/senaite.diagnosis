@@ -4,6 +4,12 @@
   <permissions>
 
     <!-- Field permissions -->
+    <permission name="senaite.diagnosis: Field: Edit Date of Onset" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
     <permission name="senaite.diagnosis: Field: Edit Symptoms" acquire="False">
       <role name="LabClerk"/>
       <role name="LabManager"/>

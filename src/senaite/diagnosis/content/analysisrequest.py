@@ -22,15 +22,16 @@ from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 from archetypes.schemaextender.interfaces import ISchemaExtender
 from bika.lims.interfaces import IAnalysisRequest
 from Products.CMFCore.permissions import View
+from senaite.core.browser.widgets import DateTimeWidget
 from senaite.core.browser.widgets import ReferenceWidget
 from senaite.core.catalog import SETUP_CATALOG
 from senaite.diagnosis import messageFactory as _
 from senaite.diagnosis import permissions
+from senaite.diagnosis.content.fields import ExtDateTimeField
 from senaite.diagnosis.content.fields import ExtUIDReferenceField
 from senaite.diagnosis.interfaces import ISenaiteDiagnosisLayer
 from zope.component import adapter
 from zope.interface import implementer
-
 
 NEW_FIELDS = [
 
@@ -58,6 +59,24 @@ NEW_FIELDS = [
             },
             showOn=True,
         )
+    ),
+
+    ExtDateTimeField(
+        "DateOfOnset",
+        required=False,
+        read_permission=View,
+        write_permission=permissions.FieldEditDateOfOnset,
+        widget=DateTimeWidget(
+            render_own_label=True,
+            label=_(u"Date of Onset"),
+            description=_(
+                u"Date when the signs and symptoms were first noted"
+            ),
+            show_time=False,
+            visible={
+                "add": "edit"
+            },
+        ),
     ),
 
 ]

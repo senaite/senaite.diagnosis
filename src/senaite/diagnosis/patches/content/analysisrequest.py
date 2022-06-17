@@ -47,3 +47,15 @@ def setDateOfOnset(self, value):  # noqa camelcase
     """Sets the date of onset, when the signs and symptoms were first noted
     """
     self.getField("DateOfOnset").set(self, value)
+
+
+def getDateOfDiagnosis(self):  # noqa camelcase
+    """Returns the date of diagnosis, when the diagnosis was/were determined
+    """
+    return self.getField("DateOfDiagnosis").get(self)
+
+
+def setDateOfDiagnosis(self, value):  # noqa camelcase
+    """Sets the date of diagnosis, when the diagnosis was/were determined
+    """
+    self.getField("DateOfDiagnosis").set(self, value)

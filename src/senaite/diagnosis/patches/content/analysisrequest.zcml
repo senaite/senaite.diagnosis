@@ -33,4 +33,16 @@
       ignoreOriginal="True"
       replacement=".analysisrequest.setDateOfOnset" />
 
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getDateOfDiagnosis"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getDateOfDiagnosis" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setDateOfDiagnosis"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setDateOfDiagnosis" />
+
 </configure>

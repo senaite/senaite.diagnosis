@@ -79,6 +79,24 @@ NEW_FIELDS = [
         ),
     ),
 
+    ExtDateTimeField(
+        "DateOfDiagnosis",
+        required=False,
+        read_permission=View,
+        write_permission=permissions.FieldEditDateOfDiagnosis,
+        widget=DateTimeWidget(
+            render_own_label=True,
+            label=_(u"Date of Diagnosis"),
+            description=_(
+                u"Date when the diagnosis was/were determined"
+            ),
+            show_time=False,
+            visible={
+                "add": "edit"
+            },
+        ),
+    ),
+
 ]
 
 

@@ -20,5 +20,6 @@
 
 # Field permissions for Samples (aka AnalysisRequest)
 
+FieldEditDateOfDiagnosis = "senaite.diagnosis: Field: Edit Date of Diagnosis"
 FieldEditDateOfOnset = "senaite.diagnosis: Field: Edit Date of Onset"
 FieldEditSymptoms = "senaite.diagnosis: Field: Edit Symptoms"

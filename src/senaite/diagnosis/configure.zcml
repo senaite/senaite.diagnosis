@@ -13,8 +13,14 @@
   <!-- Import senaite.core permissions -->
   <include package="bika.lims" file="permissions.zcml" />
 
+  <!-- Import senaite.diagnosis permissions -->
+  <include file="permissions.zcml" />
+
   <!-- Package includes -->
   <include package=".browser"/>
+  <include package=".content"/>
+  <include package=".patches"/>
+  <include package=".subscribers"/>
 
   <!-- Default profile -->
   <genericsetup:registerProfile

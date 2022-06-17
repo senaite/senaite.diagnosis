@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rolemap>
+
+  <permissions>
+
+    <!-- Field permissions -->
+    <permission name="senaite.diagnosis: Field: Edit Symptoms" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
+
+  </permissions>
+
+</rolemap>

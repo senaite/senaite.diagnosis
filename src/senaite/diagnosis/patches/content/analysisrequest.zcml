@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:monkey="http://namespaces.plone.org/monkey"
+    i18n_domain="senaite.diagnosis">
+
+  <monkey:patch
+    class="bika.lims.content.analysisrequest.AnalysisRequest"
+    original="getRawSymptoms"
+    ignoreOriginal="True"
+    replacement=".analysisrequest.getRawSymptoms" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getSymptoms"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getRawSymptoms" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setSymptoms"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getRawSymptoms" />
+
+</configure>

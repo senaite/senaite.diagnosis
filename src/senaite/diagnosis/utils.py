@@ -19,10 +19,18 @@
 # Some rights reserved, see README and LICENSE.
 
 import re
-from zope.interface import Invalid
-from senaite.core.catalog import SETUP_CATALOG
 from bika.lims import api
+from bika.lims.utils import t as _t
+from bika.lims.utils import to_utf8
+from senaite.core.catalog import SETUP_CATALOG
 from senaite.diagnosis import messageFactory as _
+from zope.interface import Invalid
+
+
+def translate(i18n_message, mapping=None):
+    """Translates a message and handles mapping
+    """
+    return to_utf8(_t(_(i18n_message, mapping=mapping)))
 
 
 def is_valid_code(value):

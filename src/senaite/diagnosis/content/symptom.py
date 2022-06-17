@@ -35,11 +35,12 @@ from zope.interface import invariant
 
 
 class ISymptomSchema(model.Schema):
-    """Schema interface
+    """Schema interface for Symptom content
     """
 
     code = schema.TextLine(
         title=_(u"Code"),
+        description=_(u"Unique code of this symptom"),
         required=True,
     )
 
@@ -90,8 +91,15 @@ class ISymptomSchema(model.Schema):
 
 @implementer(ISymptom, ISymptomSchema, IDeactivable)
 class Symptom(Container):
-    """Disease type
+    """Symptom content. Signs and symptoms are the observed or detectable
+    signs, and experienced symptoms of an illness, injury, or condition. A sign
+    for example may be a higher or lower temperature than normal, raised or
+    lowered blood pressure or an abnormality showing on a medical scan. A
+    symptom is something out of the ordinary that is experienced by an
+    individual such as feeling feverish, a headache or other pain or pains in
+    the body
     """
+
     # Catalogs where this type will be catalogued
     _catalogs = [SETUP_CATALOG]
 

@@ -76,7 +76,7 @@ NEW_FIELDS = [
                 default="Date of Onset"
             ),
             description=_(
-                "label_sample_dateofonset",
+                "description_sample_dateofonset",
                 default="Date when the signs and symptoms were first noted"
             ),
             show_time=False,

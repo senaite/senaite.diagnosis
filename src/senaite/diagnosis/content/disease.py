@@ -24,6 +24,7 @@ from bika.lims.interfaces import IDeactivable
 from plone.dexterity.content import Container
 from plone.supermodel import model
 from Products.CMFCore import permissions
+from senaite.core import PloneMessageFactory as _p
 from senaite.core.catalog import SETUP_CATALOG
 from senaite.diagnosis import messageFactory as _
 from senaite.diagnosis.interfaces import IDisease
@@ -39,17 +40,24 @@ class IDiseaseSchema(model.Schema):
     """
 
     code = schema.TextLine(
-        title=_(u"Code"),
+        title=_(
+            "label_disease_code",
+            default="Code"
+        ),
+        description=_(
+            "description_disease_code",
+            default="Unique code of this disease"
+        ),
         required=True,
     )
 
     title = schema.TextLine(
-        title=u"Title",
+        title=_p("Title"),
         required=False,
     )
 
     description = schema.Text(
-        title=u"Description",
+        title=_p("Description"),
         required=False,
     )
 

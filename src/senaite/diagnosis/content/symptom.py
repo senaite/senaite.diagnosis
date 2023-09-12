@@ -24,6 +24,7 @@ from bika.lims.interfaces import IDeactivable
 from plone.dexterity.content import Container
 from plone.supermodel import model
 from Products.CMFCore import permissions
+from senaite.core import PloneMessageFactory as _p
 from senaite.core.catalog import SETUP_CATALOG
 from senaite.diagnosis import messageFactory as _
 from senaite.diagnosis.interfaces import ISymptom
@@ -39,25 +40,35 @@ class ISymptomSchema(model.Schema):
     """
 
     code = schema.TextLine(
-        title=_(u"Code"),
-        description=_(u"Unique code of this symptom"),
+        title=_(
+            "label_symptom_code",
+            default="Code",
+        ),
+        description=_(
+            "description_symptom_code",
+            default="Unique code of this symptom"
+        ),
         required=True,
     )
 
     title = schema.TextLine(
-        title=u"Title",
+        title=_p("Title"),
         required=True,
     )
 
     description = schema.Text(
-        title=u"Description",
+        title=_p("Description"),
         required=False,
     )
 
     gender = schema.Choice(
-        title=_(u"Gender"),
+        title=_(
+            "label_symptom_gender",
+            default="Gender"
+        ),
         description=_(
-            u"Gender this symptom applies to"
+            "description_symptom_gender",
+            default="Gender this symptom applies to"
         ),
         source="senaite.patient.vocabularies.gender",
         default="",
@@ -65,10 +76,14 @@ class ISymptomSchema(model.Schema):
     )
 
     severity_levels = schema.Bool(
-        title=_(u"Severity levels permitted"),
+        title=_(
+            "label_symptom_severity",
+            default="Severity levels permitted"
+        ),
         description=_(
-            u"Select if patient can experience different stress levels of this "
-            u"symptom (none, mild, moderate, severe)"
+            "description_symptom_severity",
+            default="Select if patient can experience different stress levels "
+                    "of this symptom (none, mild, moderate, severe)"
         ),
         required=False,
     )

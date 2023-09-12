@@ -21,6 +21,7 @@
 import collections
 from bika.lims import api
 from bika.lims import senaiteMessageFactory as _s
+from senaite.core import PloneMessageFactory as _p
 from bika.lims.utils import get_link_for
 from senaite.app.listing import ListingView
 from senaite.core.catalog import SETUP_CATALOG
@@ -52,15 +53,18 @@ class SymptomsListingView(ListingView):
 
         self.columns = collections.OrderedDict((
             ("Code", {
-                "title": _("Code"),
+                "title": _(
+                    "column_symptoms_code",
+                    default="Code"
+                ),
                 "index": "sortable_title"
             }),
             ("Title", {
-                "title": _s("Title"),
+                "title": _p("Title"),
                 "index": "sortable_title"
             }),
             ("Description", {
-                "title": _s("Description"),
+                "title": _p("Description"),
                 "index": "Description"
             }),
         ))

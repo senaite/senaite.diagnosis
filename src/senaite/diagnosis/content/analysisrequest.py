@@ -42,10 +42,14 @@ NEW_FIELDS = [
         read_permission=View,
         write_permission=permissions.FieldEditSymptoms,
         widget=ReferenceWidget(
-            label=_(u"Signs and Symptoms"),
+            label=_(
+                "label_sample_symptoms",
+                default="Signs and Symptoms"
+            ),
             description=_(
-                u"Observed or detectable signs, and experienced symptoms of an "
-                u"illness, injury, or condition"
+                "description_sample_symptoms",
+                default="Observed or detectable signs, and experienced "
+                        "symptoms of an illness, injury, or condition"
             ),
             render_own_label=True,
             visible={
@@ -57,7 +61,6 @@ NEW_FIELDS = [
                 "sort_on": "sortable_title",
                 "sort_order": "ascending",
             },
-            showOn=True,
         )
     ),
 
@@ -68,9 +71,13 @@ NEW_FIELDS = [
         write_permission=permissions.FieldEditDateOfOnset,
         widget=DateTimeWidget(
             render_own_label=True,
-            label=_(u"Date of Onset"),
+            label=_(
+                "label_sample_dateofonset",
+                default="Date of Onset"
+            ),
             description=_(
-                u"Date when the signs and symptoms were first noted"
+                "label_sample_dateofonset",
+                default="Date when the signs and symptoms were first noted"
             ),
             show_time=False,
             visible={
@@ -86,12 +93,16 @@ NEW_FIELDS = [
         read_permission=View,
         write_permission=permissions.FieldEditDiseases,
         widget=ReferenceWidget(
-            label=_(u"Diseases or conditions"),
+            label=_(
+                "label_sample_diseases",
+                default="Diseases or conditions"
+            ),
             description=_(
-                u"Particular abnormal conditions that negatively affect the "
-                u"structure or function of all or part of an organism. Often "
-                u"known to be medical conditions that are associated with "
-                u"specific signs and symptoms"
+                "description_sample_diseases",
+                default="Particular abnormal conditions that negatively "
+                        "affect the structure or function of all or part of "
+                        "an organism. Often known to be medical conditions "
+                        "that are associated with specific signs and symptoms"
             ),
             render_own_label=True,
             visible={
@@ -103,7 +114,6 @@ NEW_FIELDS = [
                 "sort_on": "sortable_title",
                 "sort_order": "ascending",
             },
-            showOn=True,
         )
     ),
 
@@ -114,11 +124,15 @@ NEW_FIELDS = [
         write_permission=permissions.FieldEditDateOfDiagnosis,
         widget=DateTimeWidget(
             render_own_label=True,
-            label=_(u"Date of Diagnosis"),
+            label=_(
+                "label_sample_dateofdiagnosis",
+                default="Date of Diagnosis"
+            ),
             description=_(
-                u"Date when the diagnosis, as the process of identifying a "
-                u"disease, condition or injure from its signs and symptoms, "
-                u"was determined"
+                "description_sample_dateofdiagnosis",
+                default="Date when the diagnosis, as the process of "
+                        "identifying a disease, condition or injure from its "
+                        "signs and symptoms, was determined"
             ),
             show_time=False,
             visible={
@@ -134,10 +148,14 @@ NEW_FIELDS = [
         read_permission=View,
         write_permission=permissions.FieldEditEtiologicAgents,
         widget=ReferenceWidget(
-            label=_(u"Etiologic agents"),
+            label=_(
+                "label_sample_etiologicagents",
+                default="Etiologic agents"
+            ),
             description=_(
-                u"Infectious agents (microorganisms or toxins) that cause or "
-                u"may cause the disease or diseases"
+                "description_sample_etiologicagents",
+                default="Infectious agents (microorganisms or toxins) that "
+                        "cause or may cause the disease or diseases"
             ),
             render_own_label=True,
             visible={
@@ -149,7 +167,6 @@ NEW_FIELDS = [
                 "sort_on": "sortable_title",
                 "sort_order": "ascending",
             },
-            showOn=True,
         )
     ),
 

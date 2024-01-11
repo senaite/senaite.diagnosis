@@ -24,7 +24,7 @@ This extension adds Diseases, Signs and Symptoms handling to `SENAITE LIMS`_.
 License
 -------
 
-**SENAITE.DIAGNOSIS** Copyright (C) 2022-2023 RIDING BYTES & NARALABS
+**SENAITE.DIAGNOSIS** Copyright (C) 2022-2024 RIDING BYTES & NARALABS
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the `GNU General Public License version 2`_ as published

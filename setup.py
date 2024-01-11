@@ -36,8 +36,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "senaite.lims>=2.3.0",
-        "senaite.patient",
+        "senaite.patient>=1.4.0",
     ],
     extras_require={
         "test": [

@@ -1,7 +1,7 @@
 Diseases, Signs and Symptoms handling for SENAITE
 =================================================
 
-.. image:: https://img.shields.io/pypi/v/senaite.ast.svg?style=flat-square
+.. image:: https://img.shields.io/pypi/v/senaite.diagnosis.svg?style=flat-square
     :target: https://pypi.python.org/pypi/senaite.diagnosis
 
 .. image:: https://img.shields.io/travis/com/senaite/senaite.diagnosis/master.svg?style=flat-square

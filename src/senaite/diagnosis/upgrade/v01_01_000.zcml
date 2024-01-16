@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:upgradeStep
+      title="Upgrade to SENAITE DIAGNOSIS 1.1.0"
+      source="1.0.1"
+      destination="1100"
+      handler=".v01_01_000.upgrade"
+      profile="senaite.diagnosis:default"/>
+
+  <genericsetup:upgradeStep
+      title="Upgrade to SENAITE DIAGNOSIS 1.1.0"
+      source="1.0.0"
+      destination="1100"
+      handler=".v01_01_000.upgrade"
+      profile="senaite.diagnosis:default"/>
+
+</configure>

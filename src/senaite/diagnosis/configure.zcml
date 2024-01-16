@@ -21,6 +21,7 @@
   <include package=".content"/>
   <include package=".patches"/>
   <include package=".subscribers"/>
+  <include package=".upgrade"/>
 
   <!-- Default profile -->
   <genericsetup:registerProfile

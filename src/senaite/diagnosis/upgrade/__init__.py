@@ -17,9 +17,3 @@
 #
 # Copyright 2022-2024 by it's authors.
 # Some rights reserved, see README and LICENSE.
-
-FieldEditDateOfDiagnosis = "senaite.diagnosis: Field: Edit Date of Diagnosis"
-FieldEditDateOfOnset = "senaite.diagnosis: Field: Edit Date of Onset"
-FieldEditEtiologicAgents = "senaite.diagnosis: Field: Edit Etiologic Agents"
-FieldEditDiseases = "senaite.diagnosis: Field: Edit Diseases"
-FieldEditSymptoms = "senaite.diagnosis: Field: Edit Symptoms"

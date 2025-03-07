@@ -260,7 +260,7 @@ NEW_FIELDS = [
             ),
             description=_(
                 u"description_sample_case_outcome",
-                default=u"result of the case based on the patient's condition "
+                default=u"Result of the case based on the patient's condition "
                         u"or treatment outcome"
             ),
             format="select",

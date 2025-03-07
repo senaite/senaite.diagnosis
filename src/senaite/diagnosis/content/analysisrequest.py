@@ -228,9 +228,9 @@ NEW_FIELDS = [
 
     ExtStringField(
         "CaseStatus",
-        vocabularyFactory=CASE_STATUSES_VOCABULARY_ID,
         read_permission=View,
         write_permission=FieldEditCaseStatus,
+        vocabulary_factory=CASE_STATUSES_VOCABULARY_ID,
         widget=SelectionWidget(
             label=_(
                 u"label_sample_case_status",
@@ -250,9 +250,9 @@ NEW_FIELDS = [
 
     ExtStringField(
         "CaseOutcome",
-        vocabularyFactory=CASE_OUTCOMES_VOCABULARY_ID,
         read_permission=View,
         write_permission=FieldEditCaseOutcome,
+        vocabulary_factory=CASE_OUTCOMES_VOCABULARY_ID,
         widget=SelectionWidget(
             label=_(
                 u"label_sample_case_outcome",

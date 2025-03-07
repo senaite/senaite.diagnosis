@@ -94,3 +94,51 @@ def setEtiologicAgents(self, value):  # noqa camelcase
     """Sets the etiologic agents to the sample
     """
     self.getField("EtiologicAgents").set(self, value)
+
+
+def getDiagnosis(self):  # noqa camelcase
+    """Returns the determined diagnosis
+    """
+    return self.getField("Diagnosis").get(self)
+
+
+def setDiagnosis(self, value):  # noqa camelcase
+    """Sets the determined diagnosis
+    """
+    self.getField("Diagnosis").set(self, value)
+
+
+def getAdditionalNotes(self):  # noqa camelcase
+    """Returns the additional information provided for this sample
+    """
+    return self.getField("AdditionalNotes").get(self)
+
+
+def setAdditionalNotes(self, value):  # noqa camelcase
+    """Sets the additional information provided for this sample
+    """
+    self.getField("AdditionalNotes").set(self, value)
+
+
+def getCaseStatus(self):  # noqa camelcase
+    """Returns the case status of this sample
+    """
+    return self.getField("CaseStatus").get(self)
+
+
+def setCaseStatus(self, value):  # noqa camelcase
+    """Sets the case status for this sample
+    """
+    self.getField("CaseStatus").set(self, value)
+
+
+def getCaseOutcome(self):  # noqa camelcase
+    """Returns the case outcome of this sample
+    """
+    return self.getField("CaseOutcome").get(self)
+
+
+def setCaseOutcome(self, value):  # noqa camelcase
+    """Sets the case outcome for this sample
+    """
+    self.getField("CaseOutcome").set(self, value)

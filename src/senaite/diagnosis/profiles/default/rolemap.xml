@@ -34,6 +34,30 @@
       <role name="Manager"/>
       <role name="Client"/>
     </permission>
+    <permission name="senaite.diagnosis: Field: Edit Diagnosis" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
+    <permission name="senaite.diagnosis: Field: Edit Additional Notes" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
+    <permission name="senaite.diagnosis: Field: Edit Case Status" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
+    <permission name="senaite.diagnosis: Field: Edit Case Outcome" acquire="False">
+      <role name="LabClerk"/>
+      <role name="LabManager"/>
+      <role name="Manager"/>
+      <role name="Client"/>
+    </permission>
 
   </permissions>
 

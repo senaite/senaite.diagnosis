@@ -3,6 +3,13 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
   <genericsetup:upgradeStep
+      title="Setup permissions for new sample fields"
+      source="1100"
+      destination="1101"
+      handler=".v01_01_000.setup_permissions"
+      profile="senaite.diagnosis:default"/>
+
+  <genericsetup:upgradeStep
       title="Upgrade to SENAITE DIAGNOSIS 1.1.0"
       source="1.0.1"
       destination="1100"

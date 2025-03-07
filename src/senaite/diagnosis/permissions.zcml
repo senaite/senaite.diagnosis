@@ -8,5 +8,9 @@
   <permission id="senaite.diagnosis.permissions.FieldEditDiseases" title="senaite.diagnosis: Field: Edit Diseases"/>
   <permission id="senaite.diagnosis.permissions.FieldEditEtiologicAgents" title="senaite.diagnosis: Field: Edit Etiologic Agents"/>
   <permission id="senaite.diagnosis.permissions.FieldEditSymptoms" title="senaite.diagnosis: Field: Edit Symptoms"/>
+  <permission id="senaite.diagnosis.permissions.FieldEditDiagnosis" title="senaite.diagnosis: Field: Edit Diagnosis"/>
+  <permission id="senaite.diagnosis.permissions.FieldEditAdditionalNotes" title="senaite.diagnosis: Field: Edit Additional Notes"/>
+  <permission id="senaite.diagnosis.permissions.FieldEditCaseStatus" title="senaite.diagnosis: Field: Edit Case Status"/>
+  <permission id="senaite.diagnosis.permissions.FieldEditCaseOutcome" title="senaite.diagnosis: Field: Edit Case Outcome"/>
 
 </configure>

@@ -26,6 +26,7 @@ from zope.i18nmessageid import MessageFactory
 from config import PRODUCT_NAME
 
 messageFactory = MessageFactory(PRODUCT_NAME)
+_ = messageFactory
 logger = logging.getLogger(PRODUCT_NAME)
 
 

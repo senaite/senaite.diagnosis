@@ -20,7 +20,9 @@
 
 from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender
 from archetypes.schemaextender.interfaces import ISchemaExtender
+from bika.lims.browser.widgets import SelectionWidget
 from bika.lims.interfaces import IAnalysisRequest
+from Products.Archetypes.Widget import TextAreaWidget
 from Products.CMFCore.permissions import View
 from senaite.core.browser.widgets import DateTimeWidget
 from senaite.core.browser.widgets import ReferenceWidget
@@ -28,8 +30,16 @@ from senaite.core.catalog import SETUP_CATALOG
 from senaite.diagnosis import messageFactory as _
 from senaite.diagnosis import permissions
 from senaite.diagnosis.content.fields import ExtDateTimeField
+from senaite.diagnosis.content.fields import ExtStringField
+from senaite.diagnosis.content.fields import ExtTextField
 from senaite.diagnosis.content.fields import ExtUIDReferenceField
 from senaite.diagnosis.interfaces import ISenaiteDiagnosisLayer
+from senaite.diagnosis.permissions import FieldEditAdditionalNotes
+from senaite.diagnosis.permissions import FieldEditCaseOutcome
+from senaite.diagnosis.permissions import FieldEditCaseStatus
+from senaite.diagnosis.permissions import FieldEditDiagnosis
+from senaite.diagnosis.vocabularies.case import CASE_OUTCOMES_VOCABULARY_ID
+from senaite.diagnosis.vocabularies.case import CASE_STATUSES_VOCABULARY_ID
 from zope.component import adapter
 from zope.interface import implementer
 
@@ -166,6 +176,96 @@ NEW_FIELDS = [
                 "is_active": True,
                 "sort_on": "sortable_title",
                 "sort_order": "ascending",
+            },
+        )
+    ),
+
+    ExtTextField(
+        "Diagnosis",
+        read_permission=View,
+        write_permission=FieldEditDiagnosis,
+        widget=TextAreaWidget(
+            label=_(
+                u"label_sample_diagnosis",
+                default=u"Diagnosis",
+            ),
+            description=_(
+                u"description_sample_diagnosis",
+                default=u"Assessment or identification of the disease, "
+                        u"condition, or injury affecting the patient, based "
+                        u"on observed signs and reported symptoms",
+            ),
+            render_own_label=True,
+            visible={
+                "add": "edit",
+            },
+            rows=4,
+        )
+    ),
+
+    ExtTextField(
+        "AdditionalNotes",
+        read_permission=View,
+        write_permission=FieldEditAdditionalNotes,
+        widget=TextAreaWidget(
+            label=_(
+                u"label_sample_additional_notes",
+                default=u"Additional notes",
+            ),
+            description=_(
+                u"description_sample_additional_notes",
+                default=u"Additional details about the patient's condition or "
+                        u"other relevant information that may assist with "
+                        u"diagnosis and interpretation",
+            ),
+            render_own_label=True,
+            visible={
+                "add": "edit",
+            },
+            rows=4,
+        )
+    ),
+
+    ExtStringField(
+        "CaseStatus",
+        vocabularyFactory=CASE_STATUSES_VOCABULARY_ID,
+        read_permission=View,
+        write_permission=FieldEditCaseStatus,
+        widget=SelectionWidget(
+            label=_(
+                u"label_sample_case_status",
+                default=u"Case status",
+            ),
+            description=_(
+                u"description_sample_case_status",
+                default=u"Classification of the case based on its context or "
+                        u"investigation type"
+            ),
+            format="select",
+            visible={
+                "add": "edit",
+            },
+        )
+    ),
+
+    ExtStringField(
+        "CaseOutcome",
+        vocabularyFactory=CASE_OUTCOMES_VOCABULARY_ID,
+        read_permission=View,
+        write_permission=FieldEditCaseOutcome,
+        widget=SelectionWidget(
+            label=_(
+                u"label_sample_case_outcome",
+                default=u"Case outcome",
+            ),
+            description=_(
+                u"description_sample_case_outcome",
+                default=u"result of the case based on the patient's condition "
+                        u"or treatment outcome"
+            ),
+            format="select",
+            visible={
+                "add": "edit",
             },
         )
     ),

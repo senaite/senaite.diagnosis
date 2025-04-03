@@ -57,7 +57,7 @@ class DiseasesListingView(ListingView):
                     "column_diseases_code",
                     default="Code"
                 ),
-                "index": "sortable_title"
+                "sortable": True,
             }),
             ("Title", {
                 "title": _p("Title"),

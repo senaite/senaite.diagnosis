@@ -57,7 +57,7 @@ class SymptomsListingView(ListingView):
                     "column_symptoms_code",
                     default="Code"
                 ),
-                "index": "sortable_title"
+                "sortable": True,
             }),
             ("Title", {
                 "title": _p("Title"),

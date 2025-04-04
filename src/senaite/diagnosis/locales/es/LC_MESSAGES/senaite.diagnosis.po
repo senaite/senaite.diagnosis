@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-01-11 16:17+0000\n"
+"POT-Creation-Date: 2025-04-04 11:20+0000\n"
 "PO-Revision-Date: 2023-09-12 15:52+0000\n"
 "Last-Translator: Jordi Puiggené <jpuiggene@naralabs.com>, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/senaite/teams/175784/es/)\n"
@@ -43,15 +43,15 @@ msgstr "Agente etiológico"
 msgid "Etiologic agents"
 msgstr "Agentes etiológicos"
 
-#: senaite/diagnosis/configure.zcml:33
+#: senaite/diagnosis/configure.zcml:34
 msgid "Patient diagnostic information handling for SENAITE"
 msgstr "Gestión de datos de diagnósticos de pacientes para SENAITE"
 
-#: senaite/diagnosis/configure.zcml:33
+#: senaite/diagnosis/configure.zcml:34
 msgid "SENAITE DIAGNOSIS"
 msgstr "SENAITE DIAGNOSIS"
 
-#: senaite/diagnosis/configure.zcml:51
+#: senaite/diagnosis/configure.zcml:52
 msgid "SENAITE DIAGNOSIS (uninstall)"
 msgstr "SENAITE DIAGNOSIS (desinstalar)"
 
@@ -78,10 +78,8 @@ msgstr "Código"
 msgid "description_disease_code"
 msgstr "Código único de la enfermedad"
 
-#. condition or injure from its signs and symptoms, was determined"
 #. Default: "Date when the diagnosis, as the process of identifying a disease, condition or injure from its signs and symptoms, was determined"
 #: senaite/diagnosis/content/analysisrequest.py:131
-#, fuzzy
 msgid "description_sample_dateofdiagnosis"
 msgstr "Fecha cuando se determinó el diagnóstico, como proceso de identificación de la enfermedad, condición o lesión"
 
@@ -90,25 +88,18 @@ msgstr "Fecha cuando se determinó el diagnóstico, como proceso de identificaci
 msgid "description_sample_dateofonset"
 msgstr "Fecha cuando se detectaron los primeras señales y síntomas"
 
-#. structure or function of all or part of an organism. Often known to be
-#. medical conditions that are associated with specific signs and symptoms"
 #. Default: "Particular abnormal conditions that negatively affect the structure or function of all or part of an organism. Often known to be medical conditions that are associated with specific signs and symptoms"
 #: senaite/diagnosis/content/analysisrequest.py:100
-#, fuzzy
 msgid "description_sample_diseases"
 msgstr "Condiciones anormales que afectan negativamente la estructura o función de parte o de la totalidad del organismo. También conocidas como condiciones médicas que conllevan asociadas señales y síntomas"
 
-#. cause the disease or diseases"
 #. Default: "Infectious agents (microorganisms or toxins) that cause or may cause the disease or diseases"
 #: senaite/diagnosis/content/analysisrequest.py:155
-#, fuzzy
 msgid "description_sample_etiologicagents"
 msgstr "Agentes infecciosos (microorganismos o toxinas) que pueden ser causantes de enfermedad"
 
-#. illness, injury, or condition"
 #. Default: "Observed or detectable signs, and experienced symptoms of an illness, injury, or condition"
 #: senaite/diagnosis/content/analysisrequest.py:49
-#, fuzzy
 msgid "description_sample_symptoms"
 msgstr "Señales o síntomas observados o detectables de una enfermedad, condición o lesión"
 
@@ -122,10 +113,8 @@ msgstr "Código único del síntoma"
 msgid "description_symptom_gender"
 msgstr "Género al que aplica el síntoma"
 
-#. symptom (none, mild, moderate, severe)"
 #. Default: "Select if patient can experience different stress levels of this symptom (none, mild, moderate, severe)"
 #: senaite/diagnosis/content/symptom.py:83
-#, fuzzy
 msgid "description_symptom_severity"
 msgstr "Seleccionar si el paciente puede experimentar distintos niveles de estrés de éste síntoma (ninguno, leve, moderado, severo)"
 

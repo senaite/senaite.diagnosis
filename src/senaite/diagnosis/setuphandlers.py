@@ -191,23 +191,23 @@ def update_workflow_state(workflow, status_id, settings):
                 .format(workflow.id, status_id))
 
     # Create the status (if does not exist yet)
-    new_status = workflow.states.get(status_id)
-    if not new_status:
+    new_state = workflow.states.get(status_id)
+    if not new_state:
         workflow.states.addState(status_id)
-        new_status = workflow.states.get(status_id)
+        new_state = workflow.states.get(status_id)
 
     # Set basic info (title, description, etc.)
-    new_status.title = settings.get("title", new_status.title)
-    new_status.description = settings.get("description", new_status.description)
+    new_state.title = settings.get("title", new_state.title)
+    new_state.description = settings.get("description", new_state.description)
 
     # Set transitions
     trans = settings.get("transitions", ())
     if settings.get("preserve_transitions", False):
-        trans = tuple(set(new_status.transitions+trans))
-    new_status.transitions = trans
+        trans = tuple(set(new_state.transitions+trans))
+    new_state.transitions = trans
 
     # Set permissions
-    update_workflow_state_permissions(workflow, new_status, settings)
+    update_workflow_state_permissions(workflow, new_state, settings)
 
 
 def update_workflow_state_permissions(workflow, status, settings):

@@ -47,7 +47,8 @@ class IEtiologicAgentSchema(model.Schema):
 @implementer(IEtiologicAgent, IEtiologicAgentSchema, IDeactivable)
 class EtiologicAgent(Container):
     """EtiologicAgent content. An etiologic agent is an infectious agent, that
-     can be either a microorganism or a toxin, that cause or may cause a disease
+     can be either a microorganism or a toxin, that cause or may cause a
+     disease
     """
 
     # Catalogs where this type will be catalogued

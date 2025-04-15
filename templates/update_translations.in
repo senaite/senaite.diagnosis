@@ -5,7 +5,6 @@ SRC=${buildout:directory}/src/senaite/diagnosis
 I18N=$BASE/bin/i18ndude
 LOCALES=$SRC/locales
 EXCLUDE="build node_modules"
-DOMAIN=senaite.diagnosis
 
 function die() {
     echo "ERROR: $1"
@@ -58,6 +57,18 @@ find $LOCALES -name "*.mo" -delete
 # Pull Transifex
 tx_pull
 
+# Remove lines from po files starting with '#.' (Default key)
+# Files pulled from transifex always come with a wrapped value for "Default".
+# However, i18ndude does not wrap the value for "Default" (even using --wrap
+# parameter), which originates stale lines after merge.
+for po_file in $(find $LOCALES -name "*.po")
+do
+    grep -v "#\. " $po_file > $po_file.tmp
+    mv $po_file.tmp $po_file
+done
+
+# Generate the Domain
+DOMAIN=senaite.diagnosis
 echo "Processing Domain $DOMAIN"
 # Flush the english po files
 # If we don't do this, new $DOMAIN-manual.pot translations won't be synced.
@@ -66,7 +77,7 @@ echo -n "" > $LOCALES/en/LC_MESSAGES/$DOMAIN.po
 $I18N rebuild-pot --pot $LOCALES/$DOMAIN.pot --exclude "$EXCLUDE" --create $DOMAIN $SRC
 # Synchronize all .po files with the new $DOMAIN.pot
 $I18N sync --pot $LOCALES/$DOMAIN.pot $LOCALES/*/LC_MESSAGES/$DOMAIN.po
-echo "Processing Domain $DOMAIN [DONE]"
+echo "Domain $DOMAIN [DONE]"
 
 # Push Transifex
 tx_push

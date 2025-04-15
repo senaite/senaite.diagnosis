@@ -15,7 +15,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51
 # Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-# Copyright 2022-2024 by it's authors.
+# Copyright 2022-2025 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
 import re
@@ -35,11 +35,11 @@ def translate(i18n_message, mapping=None):
 
 def is_valid_code(value):
     """Return whether the value can be used as code, without special characters
-    except '-' and without empties
+    except '-', '.' and without empties
     """
     if not value:
         return False
-    regex = r'^[a-zA-Z0-9\-]*$'
+    regex = r'^[a-zA-Z0-9.-]*$'
     if re.match(regex, value):
         return True
     return False

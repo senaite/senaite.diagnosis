@@ -4,8 +4,8 @@ Diseases, Signs and Symptoms handling for SENAITE
 .. image:: https://img.shields.io/pypi/v/senaite.diagnosis.svg?style=flat-square
     :target: https://pypi.python.org/pypi/senaite.diagnosis
 
-.. image:: https://img.shields.io/travis/com/senaite/senaite.diagnosis/master.svg?style=flat-square
-    :target: https://app.travis-ci.com/github/senaite/senaite.diagnosis
+.. image:: https://img.shields.io/github/actions/workflow/status/senaite/senaite.diagnosis/build-and-test.yml?branch=master
+   :target: https://github.com/senaite/senaite.diagnosis/actions/workflows/build-and-test.yml?query=branch:master
 
 .. image:: https://img.shields.io/github/issues-pr/senaite/senaite.diagnosis.svg?style=flat-square
     :target: https://github.com/senaite/senaite.diagnosis/pulls
@@ -24,7 +24,7 @@ This extension adds Diseases, Signs and Symptoms handling to `SENAITE LIMS`_.
 License
 -------
 
-**SENAITE.DIAGNOSIS** Copyright (C) 2022-2024 RIDING BYTES & NARALABS
+**SENAITE.DIAGNOSIS** Copyright (C) 2022-2025 RIDING BYTES & NARALABS
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the `GNU General Public License version 2`_ as published

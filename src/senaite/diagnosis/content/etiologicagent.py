@@ -15,7 +15,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51
 # Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-# Copyright 2022-2024 by it's authors.
+# Copyright 2022-2025 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
 from AccessControl import ClassSecurityInfo
@@ -47,7 +47,8 @@ class IEtiologicAgentSchema(model.Schema):
 @implementer(IEtiologicAgent, IEtiologicAgentSchema, IDeactivable)
 class EtiologicAgent(Container):
     """EtiologicAgent content. An etiologic agent is an infectious agent, that
-     can be either a microorganism or a toxin, that cause or may cause a disease
+     can be either a microorganism or a toxin, that cause or may cause a
+     disease
     """
 
     # Catalogs where this type will be catalogued

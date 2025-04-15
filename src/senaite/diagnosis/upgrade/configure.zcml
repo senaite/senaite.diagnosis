@@ -1,6 +1,7 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- 1.2.0 -->
+  <include file="v01_02_000.zcml"/>
 
   <!-- 1.1.0 -->
   <include file="v01_01_000.zcml"/>

@@ -4,6 +4,7 @@ Changelog
 1.2.0 (unreleased)
 ------------------
 
+- #5 New sample fields: Diagnosis, Additional Notes, Case Status, Case Outcome
 - #7 Allow full stops in Disease and Symptom codes
 
 

@@ -18,9 +18,20 @@
 # Copyright 2022-2025 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
-from archetypes.schemaextender.field import ExtensionField
+from archetypes.schemaextender.field import ExtensionField as ATExtensionField
 from bika.lims.browser.fields import UIDReferenceField
+from Products.Archetypes.Field import StringField
+from Products.Archetypes.public import TextField
 from senaite.core.browser.fields.datetime import DateTimeField
+
+
+class ExtensionField(ATExtensionField):
+    """Mix-in class to make Archetypes fields not depend on generated accessors
+    and mutators, and use AnnotationStorage by default
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(ExtensionField, self).__init__(*args, **kwargs)
 
 
 class ExtUIDReferenceField(ExtensionField, UIDReferenceField):
@@ -30,4 +41,14 @@ class ExtUIDReferenceField(ExtensionField, UIDReferenceField):
 
 class ExtDateTimeField(ExtensionField, DateTimeField):
     """Field extender of core's DateTimeField
+    """
+
+
+class ExtStringField(ExtensionField, StringField):
+    """Field extender of StringField
+    """
+
+
+class ExtTextField(ExtensionField, TextField):
+    """Extended Text Field
     """

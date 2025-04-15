@@ -18,10 +18,15 @@
 # Copyright 2022-2025 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
+from bika.lims import api
+from senaite.core.api import workflow as wapi
+from senaite.core.catalog import SAMPLE_CATALOG
 from senaite.core.upgrade import upgradestep
 from senaite.core.upgrade.utils import UpgradeUtils
+from senaite.core.workflow import SAMPLE_WORKFLOW
 from senaite.diagnosis import logger
 from senaite.diagnosis import PRODUCT_NAME
+from senaite.diagnosis.setuphandlers import setup_workflows
 
 version = "1200"
 profile = "profile-{0}:default".format(PRODUCT_NAME)
@@ -45,3 +50,35 @@ def upgrade(tool):
 
     logger.info("{0} upgraded to version {1}".format(PRODUCT_NAME, version))
     return True
+
+
+def setup_permissions(tool):
+    """Setup permissions
+    """
+    logger.info("Setup permissions ...")
+
+    portal = tool.aq_inner.aq_parent
+    setup = portal.portal_setup
+
+    # import rolemap
+    setup.runImportStepFromProfile(profile, "rolemap")
+
+    # update sample workflow
+    setup_workflows(portal)
+
+    # update sample role mappings
+    wf = wapi.get_workflow(SAMPLE_WORKFLOW)
+    query = {"portal_type": "AnalysisRequest"}
+    brains = api.search(query, SAMPLE_CATALOG)
+    total = len(brains)
+    for num, brain in enumerate(brains):
+        if num and num % 100 == 0:
+            logger.info("Processed objects: {}/{}".format(num, total))
+
+        obj = api.get_object(brain)
+        wf.updateRoleMappingsFor(obj)
+
+        # Flush the object from memory
+        obj._p_deactivate()
+
+    logger.info("Setup permissions [DONE]")

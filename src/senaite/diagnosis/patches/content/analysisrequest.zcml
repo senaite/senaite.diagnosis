@@ -81,4 +81,52 @@
       ignoreOriginal="True"
       replacement=".analysisrequest.setEtiologicAgents" />
 
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getDiagnosis"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getDiagnosis" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setDiagnosis"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setDiagnosis" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getAdditionalNotes"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getAdditionalNotes" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setAdditionalNotes"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setAdditionalNotes" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getCaseStatus"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getCaseStatus" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setCaseStatus"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setCaseStatus" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="getCaseOutcome"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.getCaseOutcome" />
+
+  <monkey:patch
+      class="bika.lims.content.analysisrequest.AnalysisRequest"
+      original="setCaseOutcome"
+      ignoreOriginal="True"
+      replacement=".analysisrequest.setCaseOutcome" />
+
 </configure>

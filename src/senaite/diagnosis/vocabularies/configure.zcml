@@ -1,0 +1,13 @@
+<configure  xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Case Statuses vocabulary -->
+  <utility
+      component=".case.CaseStatusesVocabularyFactory"
+      name="senaite.diagnosis.vocabularies.case.statuses" />
+
+  <!-- Case Outcomes vocabulary -->
+  <utility
+      component=".case.CaseOutcomesVocabularyFactory"
+      name="senaite.diagnosis.vocabularies.case.outcomes" />
+
+</configure>

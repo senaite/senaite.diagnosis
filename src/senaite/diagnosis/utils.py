@@ -35,11 +35,11 @@ def translate(i18n_message, mapping=None):
 
 def is_valid_code(value):
     """Return whether the value can be used as code, without special characters
-    except '-' and without empties
+    except '-', '.' and without empties
     """
     if not value:
         return False
-    regex = r'^[a-zA-Z0-9\-]*$'
+    regex = r'^[a-zA-Z0-9.-]*$'
     if re.match(regex, value):
         return True
     return False

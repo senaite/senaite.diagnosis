@@ -16,6 +16,7 @@ Changelog
 1.0.1 (2024-01-16)
 ------------------
 
+- #6 Add sort for Code column on Diseases and Symptoms listings
 - #3 Fix distribution fails because of missing docs folder
 
 
